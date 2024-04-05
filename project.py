@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 # Abrindo arquivo .yml
 arquivo_yml = openYML('geral.yml')
 
-# Acessado o site indicado 
+# Acessando o site indicado 
 url = arquivo_yml['url']
 driver.get(url)
 
