@@ -81,9 +81,11 @@ def quebraCaptcha(driver, key, xpath_image):
     solver = imagecaptcha()
     # Printando processo
     solver.set_verbose(1)
+    # Chave que contém crédito para resolver o captcha 
     solver.set_key(key)
     # Respondendo captcha
     captcha_text = solver.solve_and_return_solution('tmp.image')
+    # Printa caso consiga resolver o captcha, se não, mostra o erro 
     if captcha_text != 0:
         print ("captcha text: "+captcha_text)
     else:
